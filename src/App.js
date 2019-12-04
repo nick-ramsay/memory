@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar" class="navbar navbar-dark bg-dark">
+        <nav className="navbar" class="navbar fixed-top navbar-dark bg-dark">
           <a href="/" className="headerTitle"><h2>Memory!</h2></a>
           <h3 className="headerDetails">Click an image to begin!</h3>
           <h3 className="headerDetails">Score: <span>{this.state.currentScore} | High Score: {this.state.highScore}</span></h3>
@@ -58,7 +58,7 @@ class App extends Component {
             <p class="lead">Click on an image to earn points, but don't click on any more than once!</p>
           </div>
         </div>
-        <div class="container">
+        <div class="container mt-1 mb-1">
 
           {this.state.imageOptions.map(image => (
             <ImageCard
