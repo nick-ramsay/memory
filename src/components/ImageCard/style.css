@@ -1,0 +1,13 @@
+.imageContainer {
+    float: left;
+}
+
+.imageDiv {
+    width: 200px;
+    height: 200px;
+}
+
+.imageDiv:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px grey;
+}

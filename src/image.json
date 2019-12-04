@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Amy",
+        "image": "../assets/images/amy.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Boyle",
+        "image": "../assets/images/boyle.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Hitchcock",
+        "image": "../assets/images/hitchcock.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Holt",
+        "image": "../assets/images/holt.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Jake",
+        "image": "../assets/images/jake.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Doug Judy",
+        "image": "../assets/images/judy.png"
+    },
+    {
+        "id": 7,
+        "name": "Terry",
+        "image": "../assets/images/terry.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Scully",
+        "image": "../assets/images/scully.jpg"
+    }
+]
