@@ -5,15 +5,15 @@ import './App.css';
 import images from "./image.json";
 
 var imageOptions = images;
+var chosenImageNumber;
 
 class App extends Component {
-
 
   state = {
     imageOptions
   }
 
-
+  shuffleImages(){}
 
   render() {
     return (
@@ -30,15 +30,15 @@ class App extends Component {
           </div>
         </div>
         <div class="container">
-          
-            {this.state.imageOptions.map(image => (
-              <ImageCard
-                id={image.id}
-                src={image.image}
-              />
 
-            ))
-            }
+          {this.state.imageOptions.map(image => (
+            <ImageCard
+              id={image.id}
+              src={image.image}
+            />
+
+          ))
+          }
         </div>
         <footer class="fixed-bottom">
           <a href="/" className="headerTitle"><h6>Memory!</h6></a>

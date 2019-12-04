@@ -28,7 +28,7 @@ body {
 .jumbotron {
     background-image: url("./memory-game-jumbotron-image.jpg");
     background-size: cover;
-    color: darkslategrey;
+    color: white;
     box-shadow: 0px 10px 10px grey;
 }
 
