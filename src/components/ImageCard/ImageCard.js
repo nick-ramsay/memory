@@ -4,7 +4,7 @@ import "./style.css";
 function ImageCard(props) {
     return (
         <div className="col-md-4 imageContainer">
-            <img src={props.src} alt={props.name} id={props.id} className="img-thumbnail mb-2 imageDiv"></img>
+            <img onClick={()=> props.guessedImage(props.id)} src={props.src} alt={props.name} id={props.id} className="img-thumbnail mb-2 imageDiv"></img>
         </div>
     );
 }
