@@ -48,10 +48,10 @@ body {
 
 .navbar {
   text-align: center;
+  justify-content: center;
 }
 
 footer {
   background-color: darkslategrey;
-  text-align: left;
-  padding: 5px 0 2px 1%;
+  text-align: center;
 }
