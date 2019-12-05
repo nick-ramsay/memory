@@ -21,7 +21,21 @@ class App extends Component {
     highScore
   }
 
+  shuffleImages = () => {
+    imageOptions = [];
+    for (let i=0; imageOptions.length < images.length; i++) {
+      if (imageOptions.indexOf(images[i]) === -1) {
+        imageOptions.push(images[i]);
+      }
+    }
+  }
+
+  componentDidMount() {
+    this.shuffleImages();
+  }
+
   guessedImage = id => {
+    this.shuffleImages();
     if (imagesGuessed.indexOf(id) == -1) {
       imagesGuessed.push(id);
       currentScore += 1;
