@@ -2,23 +2,16 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.images {
+  margin-bottom: 40px;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -29,29 +22,39 @@ body {
     background-image: url("./memory-game-jumbotron-image.jpg");
     background-size: cover;
     color: white;
+    padding-top: 10%;
     box-shadow: 0px 10px 10px grey;
 }
 
-.headerTitle {
-  color: white;
-  font-weight: bolder;
+a:hover {
+  text-decoration:none;
 }
 
-.headerTitle:hover {
-  text-decoration: none;
+#headerTitle {
+  font-weight: bolder;
+  text-align: center;
   color: gold;
 }
 
-.headerDetails {
-  color: white;
+#headerTitle:hover {
+  color: grey;
 }
 
-.navbar {
-  text-align: center;
-  justify-content: center;
+.header {
+  color: white;
+  text-decoration: none;
 }
 
 footer {
   background-color: darkslategrey;
   text-align: center;
+  height: 35px;
+  box-shadow: 10px 0px 20px grey;
+  position: absolute;
 }
+
+@media only screen and (max-width : 640px) {
+  .header {
+    font-size: 12px;
+  }
+  }

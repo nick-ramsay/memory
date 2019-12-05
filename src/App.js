@@ -10,6 +10,7 @@ var chosenImageIndex = [];
 
 var currentScore = 0;
 var highScore = 0;
+var message = "Click an image to begin!"
 
 var imagesGuessed = [];
 
@@ -18,7 +19,8 @@ class App extends Component {
   state = {
     imageOptions,
     currentScore,
-    highScore
+    highScore,
+    message
   }
 
   shuffleImages = () => {
@@ -45,6 +47,7 @@ class App extends Component {
         imagesGuessed.push(id);
         currentScore += 1;
         this.setState({ currentScore });
+        this.setState({ message: "Correct!"})
         if (currentScore > highScore) {
           highScore = currentScore;
           this.setState({ highScore });
@@ -53,6 +56,7 @@ class App extends Component {
             currentScore = 0;
             highScore = 0;
             this.setState({ currentScore, highScore })
+            this.setState({ message: "You win! Play again!"})
           }//This indicates user won game, no images left...
         }
       }// This sets high score if new high score achieved
@@ -60,6 +64,7 @@ class App extends Component {
         imagesGuessed = [];
         currentScore = 0;
         this.setState({ currentScore })
+        this.setState({ message: "Wrong guess!"})
       } //Wrong guess, start again...
     }
 
@@ -67,9 +72,9 @@ class App extends Component {
       return (
         <div className="App">
           <nav className="navbar" class="navbar fixed-top navbar-dark bg-dark">
-            <a href="/" className="headerTitle"><h2>Memory!</h2></a>
-            <h3 className="headerDetails">Click an image to begin!</h3>
-            <h3 className="headerDetails">Score: <span>{this.state.currentScore} | High Score: {this.state.highScore}</span></h3>
+            <a href="/"><h2 className="header" id="headerTitle">Memory!</h2></a>
+            <h3 className="header" id="headerMessage">{this.state.message}</h3>
+            <h3 className="header" id="headerDetails">Score: <span>{this.state.currentScore} | High Score: {this.state.highScore}</span></h3>
           </nav>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -77,8 +82,7 @@ class App extends Component {
               <p class="lead">Click on an image to earn points, but don't click on any more than once!</p>
             </div>
           </div>
-          <div class="container mt-1 mb-1">
-
+          <div class="container images">
             {this.state.imageOptions.map(image => (
               <ImageCard
                 id={image.id}
@@ -89,7 +93,7 @@ class App extends Component {
             }
           </div>
           <footer class="fixed-bottom">
-            <a href="/" className="headerTitle"><h6>Memory!</h6></a>
+            <a href="/" id="headerTitle"><h6>Memory!</h6></a>
           </footer>
         </div>
       );
