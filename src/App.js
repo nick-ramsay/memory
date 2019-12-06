@@ -82,7 +82,8 @@ class App extends Component {
               <p class="lead">Click on an image to earn points, but don't click on any more than once!</p>
             </div>
           </div>
-          <div class="container images">
+          <main>
+          <div class="container">
             {this.state.imageOptions.map(image => (
               <ImageCard
                 id={image.id}
@@ -92,8 +93,9 @@ class App extends Component {
             ))
             }
           </div>
+          </main>
           <footer class="fixed-bottom">
-            <a href="/" id="headerTitle"><h6>Memory!</h6></a>
+            <a href="/"  id="footerText">Memory!</a>
           </footer>
         </div>
       );
